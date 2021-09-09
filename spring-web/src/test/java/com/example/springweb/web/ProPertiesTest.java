@@ -26,10 +26,5 @@ public class ProPertiesTest {
         Assert.assertEquals(neoProperties.getDescription(), "test");
     }
 
-    @Test
-    public void testMap() throws Exception{
-        Map<String, Long> orderMinTime = new HashMap<String, Long>();
-        long aa = orderMinTime.get("123");
-    }
     
 }
