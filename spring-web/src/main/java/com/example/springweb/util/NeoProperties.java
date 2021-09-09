@@ -13,4 +13,12 @@ public class NeoProperties {
 
     @Value("${com.neo.description}")
     private String description;
+
+    public String getTitle() {
+        return title;
+    }
+
+    public Object getDescription() {
+        return description;
+    }
 }

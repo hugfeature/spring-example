@@ -30,7 +30,20 @@ public class User {
     private String nickName;
 
     @Column(nullable = false)
-    private String redTime;
-
+    private String regTime;
+	public User() {
+		super();
+	}
+	public User(String nickName,String email,String userName,  String passWord, String regTime) {
+		super();
+		this.email = email;
+		this.nickName = nickName;
+		this.password = passWord;
+		this.userName = userName;
+		this.regTime = regTime;
+	}
+    public Object getNickName() {
+        return nickName;
+    }
 
 }
