@@ -1,0 +1,1 @@
+class UserControllerTest extends Specification
