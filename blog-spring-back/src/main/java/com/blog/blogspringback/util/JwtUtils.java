@@ -2,7 +2,7 @@
  * @Author: 丑牛
  * @Date: 2021-10-18 15:00:59
  * @LastEditors: 丑牛
- * @LastEditTime: 2021-10-19 15:38:47
+ * @LastEditTime: 2021-10-20 16:22:09
  * @Description: file content
  */
 package com.blog.blogspringback.util;
@@ -21,7 +21,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Data
 @Component
-@ConfigurationProperties(prefix = "blog.blogspringback.jwt")
+@ConfigurationProperties(prefix = "blogspringback.jwt")
 public class JwtUtils {
     private static String secret;
     private long expire;

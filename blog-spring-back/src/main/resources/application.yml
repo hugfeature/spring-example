@@ -2,8 +2,45 @@ mybatis-plus:
   mapper-locations: classpath*:/mapper/**Mapper.xml
 server:
   port: 8081
-markerhub:
+test:
   jwt:
     secret: f4e2e52034348f86b67cde581c0f9eb5
     expire: 604800
     header: Authorization
+shiro-redis:
+  enabled: true
+  redis-manager:
+    host: 127.0.0.1:6379
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/blog?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+  freemarker:
+    check-template-location: false
+  messages:
+    encoding: UTF-8
+  profiles:
+    active: dev
+  # 请求地址：http://localhost:8081/swagger-ui.html#/
+  swagger:
+    enabled: true
+    title: swagger文档
+    # swagger扫描的基础包，默认：全扫描
+    # base-package:
+    # 需要处理的基础URL规则，默认：/**
+    base-package: com.blog.blogspringback
+    description: 这是接口自动化测试的API 文档
+    version: 1.0.0-SNAPSHOT
+    contact:
+      name: 王兆贤
+      email: 
+    # base-path:
+    # 需要排除的URL规则，默认：空
+    # exclude-path:
+    security:
+      # 是否启用 swagger 登录验证
+      filter-plugin: false
+      username: admin
+      password: admin
