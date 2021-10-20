@@ -76,7 +76,12 @@
 			<artifactId>spring-boot-starter-validation</artifactId>
 			<version>2.5.5</version>
 		</dependency>
-
+		<!-- https://mvnrepository.com/artifact/com.battcn/swagger-spring-boot-starter 第三方swagger美化-->
+		<dependency>
+			<groupId>com.battcn</groupId>
+			<artifactId>swagger-spring-boot-starter</artifactId>
+			<version>2.1.5-RELEASE</version>
+		</dependency>
 
 		<!--  https://mvnrepository.com/artifact/cn.hutool/hutool-all java工具包 -->
 		<dependency>

@@ -2,7 +2,7 @@
  * @Author: 丑牛
  * @Date: 2021-10-19 16:05:01
  * @LastEditors: 丑牛
- * @LastEditTime: 2021-10-19 16:27:23
+ * @LastEditTime: 2021-10-20 09:47:58
  * @Description: file content
  */
 package com.blog.blogspringback.shiro;
@@ -38,13 +38,11 @@ public class AccountRealm extends AuthorizingRealm{
     }
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
-        // TODO Auto-generated method stub
         return null;
     }
 
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
-        // TODO Auto-generated method stub
         JwtToken jwtToken = (JwtToken) token;
         String userId = JwtUtils.getClaimsByToken((String) jwtToken.getPrincipal()).getSubject();
         User user = userService.getById(Long.valueOf(userId));

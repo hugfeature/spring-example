@@ -2,7 +2,7 @@
  * @Author: 丑牛
  * @Date: 2021-10-18 14:55:44
  * @LastEditors: 丑牛
- * @LastEditTime: 2021-10-19 16:02:14
+ * @LastEditTime: 2021-10-20 09:48:06
  * @Description: file content
  */
 package com.blog.blogspringback.shiro;
@@ -37,7 +37,6 @@ public class Jwtfilter extends AuthenticatingFilter {
 
     @Override
     protected AuthenticationToken createToken(ServletRequest servletRequest, ServletResponse serverResponse) throws Exception {
-        // TODO Auto-generated method stub
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         String jwt = request.getHeader("Authorization");
         if (ObjectUtils.isEmpty(jwt)){
@@ -48,7 +47,6 @@ public class Jwtfilter extends AuthenticatingFilter {
 
     @Override
     protected boolean onAccessDenied(ServletRequest servletRequest, ServletResponse serverResponse) throws Exception {
-        // TODO Auto-generated method stub
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         String jwt = request.getHeader("Authorization");
         if (ObjectUtils.isEmpty(jwt)) {

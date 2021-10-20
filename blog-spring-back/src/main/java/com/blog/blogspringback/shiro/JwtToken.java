@@ -2,7 +2,7 @@
  * @Author: 丑牛
  * @Date: 2021-10-19 15:06:20
  * @LastEditors: 丑牛
- * @LastEditTime: 2021-10-19 15:08:28
+ * @LastEditTime: 2021-10-20 09:48:27
  * @Description: file content
  */
 package com.blog.blogspringback.shiro;
@@ -16,12 +16,10 @@ public class JwtToken implements AuthenticationToken{
     }
     @Override
     public Object getCredentials() {
-        // TODO Auto-generated method stub
         return token;
     }
     @Override
     public Object getPrincipal() {
-        // TODO Auto-generated method stub
         return token;
     }
     
