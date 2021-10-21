@@ -2,7 +2,7 @@
  * @Author: 丑牛
  * @Date: 2021-10-20 11:24:08
  * @LastEditors: 丑牛
- * @LastEditTime: 2021-10-20 13:54:18
+ * @LastEditTime: 2021-10-21 09:50:05
  * @Description: file content
  */
 package com.blog.blogspringback.controller;
@@ -34,8 +34,10 @@ import cn.hutool.core.bean.BeanUtil;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
 
 @RestController
+@Slf4j
 public class BlogController {
     @Autowired
     BlogService blogService;
@@ -66,8 +68,8 @@ public class BlogController {
         if(blog.getId() != null) {
             temp = blogService.getById(blog.getId());
             // 只能编辑自己的文章
-            System.out.println(ShiroUtil.getProfile().getId());
-            Assert.isTrue(temp.getUserId().longValue() == ShiroUtil.getProfile().getId().longValue(), "没有权限编辑");
+            log.info("无编辑权限", ShiroUtil.getProfile().getId());
+                Assert.isTrue(temp.getUserId().longValue() == ShiroUtil.getProfile().getId().longValue(), "没有权限编辑");
 
         } else {
 
