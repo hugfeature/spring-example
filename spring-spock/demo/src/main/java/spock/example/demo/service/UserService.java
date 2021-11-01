@@ -23,9 +23,11 @@ import spock.example.demo.util.LogUtils;
 @Service
 public class UserService {
     @Autowired
+    public
     UserDAO userDao;
 
     @Autowired
+    public
     MoneyDAO moneyDao;
 
     public UserVO getUserById(int uid){
